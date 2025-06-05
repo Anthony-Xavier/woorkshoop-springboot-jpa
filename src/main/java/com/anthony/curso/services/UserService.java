@@ -19,8 +19,8 @@ public class UserService {
         return repository.findAll();
     }
 
-    public User findById(Long id) { // ✅ nome mais claro
-        Optional<User> obj = repository.findById(id); // ✅ método correto
-        return obj.get(); // ⚠️ cuidado: pode lançar NoSuchElementException se o ID não existir
+    public User findById(Long id) {
+        Optional<User> obj = repository.findById(id);
+        return obj.get();
     }
 }
